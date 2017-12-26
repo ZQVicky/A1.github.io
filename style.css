@@ -1,0 +1,188 @@
+body {
+    margin: 0;
+}
+/*  setting header   */
+.header {
+  height: 30vh;
+  width: 100vw;
+  background-image: url('images/6.jpg');
+  background-repeat: no-repeat;
+  background-size:cover;
+  background-position:center;
+  margin: 0;
+  border-style:none none ridge none;
+  border: none none 3px none;
+  }
+
+/*   website heading   */
+h2 {
+  font-family: 'Montserrat', 'Helvetica Nueue', Helvetica, Arial, sans-serif;
+  font-size: 4em;
+  color: #231F20;
+  padding: 60px 0 0 0;
+  text-align: center;
+  margin: 0;
+}
+
+/*   subheading   */
+h3 {
+  text-align: right;
+  margin-top: 0;
+  margin-right: 2em;
+  font-family:cursive;
+  color: #231F20;
+  font-size: 2em;
+}
+
+/*   the whole website main body   */
+.main {
+  display:flex;
+  justify-content: space-between;
+  margin-top: 1.3em;
+
+}
+
+/*   for whole section's header   */
+.section_head {
+  background-color: rgba(215, 246, 182, 1);
+  text-align: center;
+  font-size: 1.5em;
+  color: #231F20;
+  padding:auto;
+  height: 30px;
+  width:auto;
+  margin: 0;
+}
+
+/*   main body's left section, --- search bar   */
+.left_containter {
+  display: flex;
+  flex-direction: column;
+}
+
+.container1 {
+  background-color: rgba(230, 255, 204,0.59) ;
+  margin-left: 0;
+  margin-bottom: 1em;
+  height: auto;
+  width: 25.3vw;
+
+}
+
+#input {
+    margin:1em 0;
+    text-align: center;
+}
+
+input[type=text] {
+    margin-top: 1em;
+    border:2px solid #ccc;
+    border-radius: 5px;
+    height: 2em;
+    width: 15em;
+}
+
+input[type=text]:focus {
+    border-color:#231F20;
+}
+
+input[type=button] {
+    background: url('images/search.png') rgba(230, 255, 204,0.30);
+    background-size: cover;
+    background-repeat: no-repeat;
+    background-position: right;
+    border:0 none;
+    cursor:pointer;
+    border-radius: 5px;
+    font-family: 'Montserrat', 'Helvetica Nueue', Helvetica, Arial, sans-serif;
+    font-size: 1.5em;
+    margin-top: auto;
+    height: 2em;
+    width: 30%;
+}
+
+/*   main body's right section, the first part is the daily recommends part  */
+.right_containter {
+  display: flex;
+  flex-direction: column;
+}
+
+/*    right section's sub section    */
+.containter2 {
+  text-align: center;
+  background-color: rgba(230, 255, 204, 0.59) ;
+  margin: 0em 0 1em 0;
+  height: auto;
+  width: 73vw;
+}
+
+/*   recommend section   */
+.context {
+  display: flex;
+  flex-direction: row;
+  flex-wrap: wrap;
+  justify-content: space-around;
+}
+
+.img{
+  height: 9em;
+  width: 15em;
+  border-radius: 50%;
+  margin: 1em 0 1em 0;
+  background-size: cover;
+  background-repeat: no-repeat;
+  background-position: center;
+}
+
+.img1 {
+  background-image: url('images/breakfast.jpg');
+}
+.img2 {
+  background-image: url('images/lunch1.jpg');
+}
+.img3 {
+  background-image: url('images/dinner.jpg');
+}
+
+.img:hover .text{
+  opacity:0.6;
+  filter:alpha(opacity=100);
+  text-align:center;
+}
+
+.text{
+  color:#080707;
+  padding:3.5em;
+  line-height:36px;
+  background:#FFF;
+  opacity:0;
+  border-radius: 50%;
+}
+
+a {
+  font-size: 1.5em;
+  font-weight:bold;
+  text-decoration: none;
+  color: #080707;
+}
+
+p {
+  text-align: left;
+  padding-left: 8em;
+}
+
+#output > h4 {
+  font-style: italic;
+  font-size: 1.5em;
+  margin: 1em 0 1em 0;
+  padding-left:0;
+  text-align: left;
+}
+
+#output {
+  padding-left: 3em;
+}
+
+#img_api {
+  float: left;
+}

@@ -1,0 +1,66 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="Access-Control-Allow-Origin" content="*" />
+    <title>FOOD'S INSPIRATION</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <header class="header" >
+      <div class="title">
+        <h2><em>FOOD'S INSPIRATION</em></h2>
+        <h3>---Find out your recipes.</h3>
+      </div>
+    </header>
+    <div class="main">
+      <section class="left_containter">
+        <div class="container1">
+          <div class ="section_head"><em>Search bar</em></div>
+          <form id = "input">
+               <label for="search_term">Don't know what to eat? Search!!</label>
+                  <input type="text" id="search_term">
+              <input type="button" id="search_button" value="Search">
+          </form>
+        </div>
+        <div class="container1">
+          <div class ="section_head"><em>Find it in a resaurant</em></div>
+          <form id = "input">
+              <!-- <label for="search_term">Search products: -->
+                  <input type="text" id="search_term">
+              <!-- </label> -->
+              <input type="button" id="search_button" value="Search">
+          </form>
+        </div>
+      </section>
+
+      <section class="right_containter">
+        <div class="containter2">
+          <div class ="section_head"><em>Daily recommendations</em></div>
+          <div class="context">
+            <div class="img img1">
+              <div class="text"><a href="#">BREAKFAST</a></div>
+            </div>
+            <div class="img img2">
+                <div class="text"><a href="#">LUNCH</a></div>
+            </div>
+            <div class="img img3">
+                <div class="text"><a href="#">DINNER</a></div>
+            </div>
+          </div>
+        </div>
+        <div class="containter2">
+          <div class ="section_head"><em>Results</em></div>
+          <div class="context">
+            <div id="output"></div>
+          </div>
+          <img src="images/search.png" alt="">
+
+        </div>
+      </section>
+
+
+      <script src="search.js"></script>
+  </main>
+</body>
+</html>
