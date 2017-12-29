@@ -86,7 +86,7 @@ var imgClick = function() {
 
     var xhttp = new XMLHttpRequest();
     xhttp.addEventListener('load', parseResponse);
-    var url = 'http://api.yummly.com/v1/api/recipes?_app_id=ff6e13d9&_app_key=c04c6f3a6b250f5dd4a8f2864e0620d5&q=breakfast';
+    var url = 'https://api.yummly.com/v1/api/recipes?_app_id=ff6e13d9&_app_key=c04c6f3a6b250f5dd4a8f2864e0620d5&q=breakfast';
     console.log(url);
     xhttp.open('GET', url);
     xhttp.send();
