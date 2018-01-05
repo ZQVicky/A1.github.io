@@ -304,8 +304,9 @@ input[type=button] {
   width: 55vw;
   height: 45vh;
   border-style: none;
-  align-content: center;
+  align-self: center;
 }
+
 @media screen and (min-width: 769px) and (max-width: 1070px){
 
   .header {
