@@ -91,7 +91,7 @@ var doSearch = function() {
     document.getElementById('output').innerHTML = ''; //clear the context already existed in the results area.
     var search_term = document.getElementById('search_term').value; // get the input words.
     var select = document.getElementById('select');
-    var txt=select.options[select.selectedIndex].text; // get the text of options
+    var txt=select.options[select.selectedIndex].value; // get the value of options
     var words = search_term + ' ' + txt; //joining the
 
     console.log(words);
