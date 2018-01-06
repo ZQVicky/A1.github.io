@@ -224,7 +224,7 @@ input[type=button] {
 
 /*  the results area  */
 #output {
-  padding: 2em 2em 0 2em;
+  padding: 1.5em;
   margin: 0;
 }
 
@@ -238,7 +238,7 @@ input[type=button] {
   border-width: 5px;
   border-radius: 15px;
   border-color:rgba(215, 246, 182, 1);
-  margin: 1em 1em 0 1em;
+  margin: 0 0 1em 0;
   padding: 0.5em 0.5em 0 1em;
 
 }
@@ -293,7 +293,7 @@ input[type=button] {
 }
 
 .videos > h4{
-  padding: 0.2em 0.5em;
+  margin: 0.2em 0.5em 0.3em 0.5em;
   font-size: 4vh;
   font-style: italic;
   text-align: left;
@@ -305,6 +305,8 @@ input[type=button] {
   text-align:left;
   padding: 1em;
   margin: 0;
+  font-size: 2.5vh;
+  font-weight: 400;
 }
 
 .vlogs {
