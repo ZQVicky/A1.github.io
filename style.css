@@ -11,8 +11,9 @@ body {
   background-size:cover;
   background-position:center;
   margin: 0;
+  border: 3px;
+
   border-style:none none ridge none;
-  border: none none 3px none;
   }
 
 /*   website heading   */
@@ -86,8 +87,7 @@ h3 {
   border-color:rgba(215, 246, 182, 1);
   margin: 0.7em;
   padding: 0.5em;
-  font-family:cursive;
-  line-height: 4vh;
+  font-size: 2.3vh;
 }
 
 #input {
@@ -157,7 +157,7 @@ input[type=button] {
   flex-wrap: wrap;
   justify-content: space-around;
 }
-
+/*  carrot area == results area , this picture have been used to tell user here is the results area.  */
 #carrot {
   align-items: baseline;
   height: 27vh;
@@ -191,10 +191,9 @@ input[type=button] {
 
 .img:hover .text{
   opacity:0.6;
-  filter:alpha(opacity=100);
   text-align:center;
 }
-
+/*  daily recommendations's text style setting  */
 .text{
   height: inherit;
   width: inherit;
@@ -218,15 +217,17 @@ input[type=button] {
 
 }
 
+
+/*  the results area  */
 #output {
-  padding: 2em 2em -1em 2em;
+  padding: 2em 2em 0 2em;
   margin: 0;
 }
 
 
 /* the output for recipes results*/
 
-#description, #videos {
+.description, .videos {
   display: flex;
   flex-direction: column;
   border-style:dashed;
@@ -237,7 +238,7 @@ input[type=button] {
   padding: 0.5em 0.5em 0 1em;
 
 }
-#description > h4{
+.description > h4{
   margin: 0 0 0.2em 0;
   font-size: 4vh;
   font-style: italic;
@@ -245,17 +246,17 @@ input[type=button] {
   color: black;
 }
 
-#big_div {
+.big_div {
   display: flex;
   flex-direction:row;
 }
 
-#img_div {
+.img_div {
 
   justify-content: center;
 
 }
-#info_div {
+.info_div {
   padding-top: 1em;
   padding-bottom: 0.3em;
   display: flex;
@@ -263,7 +264,7 @@ input[type=button] {
   justify-content:space-around;
 }
 
-#info_div > p {
+.info_div > p {
   font-family: 'Montserrat', 'Helvetica Nueue', Helvetica, Arial, sans-serif;
   font-size: 2.5vh;
   font-weight: 400;
@@ -273,7 +274,7 @@ input[type=button] {
   margin: 0;
 }
 
-#img_api {
+.img_api {
   height: auto;
   width: 10vw;
   border-radius: 30%;
@@ -283,18 +284,18 @@ input[type=button] {
 }
 
 /*  videos css style  */
-#videos {
+.videos {
   padding: 0;
 }
 
-#videos > h3{
+.videos > h3{
   padding: 0.2em 0.5em;
   margin: 0;
   text-align: left;
   font-weight:bolder;
 }
 
-#videos > p {
+.videos > p {
   font-family: 'Montserrat', 'Helvetica Nueue', Helvetica, Arial, sans-serif;
 
   text-align:left;
@@ -302,7 +303,7 @@ input[type=button] {
   margin: 0;
 }
 
-#vlogs {
+.vlogs {
   width: 55vw;
   height: 45vh;
   border-style: none;
@@ -344,33 +345,33 @@ input[type=button] {
   #carrot {
     height: 19vh;
   }
-  #description, #videos {
+  .description, .videos {
     width: 65vw;
   }
-  #description > h4{
+  .description > h4{
     font-size: 2.5vh;
   }
 
-  #big_div {
+  .big_div {
     width: 64vw;
   }
 
-  #info_div > p {
+  .info_div > p {
     font-size: 2vh;
     line-height: 2vh;
   }
 
 
   /*  videos css style  */
-  #videos > h3{
+  .videos > h3{
     font-size: 2.5vh;
   }
 
-  #videos > p {
+  .videos > p {
     font-size: 1.7vh;
   }
 
-  #vlogs {
+  .vlogs {
     width: 60vw;
     height: 23vh;
     border-style: none;
@@ -447,46 +448,45 @@ input[type=button] {
     width: auto;
   }
 
-  #description, #videos {
+  .description, .videos {
     width: 90vw;
   }
-  #description > h4{
+  .description > h4{
     font-size: 3vh;
   }
 
-  #big_div {
+  .big_div {
     width: 90vw;
   }
 
-  #info_div > p {
+  .info_div > p {
     font-size: 2vh;
     line-height: 2.5vh;
   }
 
 
-  #img_api {
+  .img_api {
     height: auto;
     width: 12vw;
     border-radius: 30%;
   }
 
   /*  videos css style  */
-  #videos > h3{
+  .videos > h3{
     font-size: 3vh;
   }
 
-  #videos > p {
+  .videos > p {
     font-size: 2vh;
   }
 
-  #vlogs {
+  .vlogs {
     width: 80vw;
     height: 23vh;
     border-style: none;
   }
 
 }
-
 
 @media screen and (max-width: 571px){
 
@@ -563,43 +563,43 @@ input[type=button] {
   }
 
 
-  #description, #videos {
+  .description, .videos {
     width: 88vw;
   }
-  #description > h4{
+  .description > h4{
     font-size: 3vh;
   }
 
-  #big_div {
+  .big_div {
     width: 87vw;
     padding-bottom: 0.3em;
   }
-  #info_div {
+  .info_div {
     padding-top: 1em;
   }
-  #info_div > p {
+  .info_div > p {
     font-size: 2vh;
     line-height: 2.5vh;
     padding-left: 0.5em;
 
   }
 
-  #img_api {
+  .img_api {
     height: auto;
     width: 25vw;
     border-radius: 30%;
   }
 
   /*  videos css style  */
-  #videos > h3{
+  .videos > h3{
     font-size: 3vh;
   }
 
-  #videos > p {
+  .videos > p {
     font-size: 2vh;
   }
 
-  #vlogs {
+  .vlogs {
     width: 80vw;
     height: 23vh;
     border-style: none;
