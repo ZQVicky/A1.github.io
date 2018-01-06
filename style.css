@@ -74,7 +74,7 @@ h3 {
   background-color: rgba(230, 255, 204,0.59) ;
   margin-left: 0;
   height: auto;
-  width: 26.3vw;
+  width: 27vw;
 }
 .container3 {
   margin-bottom: 1em;
@@ -88,7 +88,7 @@ h3 {
   border-color:rgba(215, 246, 182, 1);
   margin: 0.7em;
   padding: 0.5em;
-  font-size: 2vh;
+  font-size: 2.3vh;
   font-family:cursive;
   text-align: justify;
 
@@ -151,7 +151,7 @@ input[type=button] {
   background-color: rgba(230, 255, 204, 0.59) ;
   margin: 0 0 1em 0;
   height: auto;
-  width: 72vw;
+  width: 71.3vw;
 }
 
 /*   recommend section   */
