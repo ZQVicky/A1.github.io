@@ -4,7 +4,7 @@ const APP_ID = "ff6e13d9"
 
 //function for call the api's information and diaplay them in the results section.
 var parseResponse = function() {
-    var response = JSON.parse(this.response);
+    var response = JSON.parse(this.response); //using json to get the response of the api.
     console.log(response);
     var results = response.matches;
     if (results == 0){
@@ -17,9 +17,6 @@ var parseResponse = function() {
         //get recipeName from api.
         var namePrint = document.createElement('h4');
         namePrint.append(document.createTextNode(results[i].recipeName));
-          var title = results[i].recipeName;
-          namePrint.id = title;
-          var idPrint = results[i]['id'];
         //get dishes course.
         var coursePrint = document.createElement('p');
         coursePrint.append(document.createTextNode('Course: ' + results[i].attributes.course));
@@ -35,17 +32,17 @@ var parseResponse = function() {
         ingredientsPrint.append(document.createTextNode('Ingredients: '+'\n'+results[i].ingredients));
         //get images.
         var imgNode = document.createElement('img');
-        imgNode.id = 'img_api';
+        imgNode.className = 'img_api';
         imgNode.src = results[i].imageUrlsBySize['90'];
 
         //creating a div to store images.
         var img_div = document.createElement('div');//creating a div element to hold each results information.
-        img_div.id = 'img_div';
+        img_div.className = 'img_div';
         //add images to imd_div.
         img_div.appendChild(imgNode);
         //creating a div to store the details of recipes.
         var info_div = document.createElement('div');
-        info_div.id = 'info_div';
+        info_div.className = 'info_div';
         //add detials into info_div.
         info_div.appendChild(coursePrint);
         info_div.appendChild(timePrint);
@@ -54,13 +51,13 @@ var parseResponse = function() {
         // info_div.appendChild(urlPrint);
         //creating a new div to store img_div and info_div, to make sure they can display as flex.
         var big_div = document.createElement('div');
-        big_div.id = 'big_div';
+        big_div.className = 'big_div';
         // add two divs into big_div.
         big_div.appendChild(img_div);
         big_div.appendChild(info_div);
         // this is the biggest div to store everything.
         var description_div = document.createElement('div');
-        description_div.id = 'description';
+        description_div.className = 'description';
         //add the fillings.
         description_div.appendChild(namePrint);
         description_div.appendChild(big_div);
@@ -91,7 +88,7 @@ var doSearch = function() {
     document.getElementById('output').innerHTML = ''; //clear the context already existed in the results area.
     var search_term = document.getElementById('search_term').value; // get the input words.
     var select = document.getElementById('select');
-    var txt=select.options[select.selectedIndex].value; // get the value of options
+    var txt=select.options[select.selectedIndex].value; // get the text of options
     var words = search_term + ' ' + txt; //joining the
 
     console.log(words);
@@ -111,6 +108,7 @@ var doSearch = function() {
     console.log(url);
     xhttp.open('GET', url);
     xhttp.send();
+
 }
 
 var search_button = document.getElementById('search_button');
@@ -189,12 +187,12 @@ var parseRes = function() {
         desPrint.append(document.createTextNode(results[i].snippet.description));
         // get videoid from results and creat a new link to play the video.
         var vlog = document.createElement('iframe');
-        vlog.id = 'vlogs';
+        vlog.className = 'vlogs';
         vlog.src = "https://www.youtube.com/embed/" + results[i].id['videoId'];
         vlog.frameborder= "0"
         //creating a div element to store each results information.
         var divCreate = document.createElement('div');
-        divCreate.id = 'videos';
+        divCreate.className = 'videos';
         divCreate.appendChild(titlePrint);
         divCreate.appendChild(vlog);
         divCreate.appendChild(desPrint);
@@ -235,30 +233,41 @@ var search_button = document.getElementById('search_button2');
 search_button.addEventListener('click',Search);
 
 
-//setting the height, make sure these two boxes have the same height.
-// window.onload=function(){
-//                  changeDivHeight();
-//             }
-//             //when the window size is changing, setting the div's height.
-//             window.onresize=function(){
-//                  changeDivHeight();
-//             }
-//             function changeDivHeight(){
-//
-//                 var lh = document.getElementById('box1');
-//                 var rh = document.getElementById('box2');
-//                   if(lh.clientHeight < rh.clientHeight){
-//                 　　　　　　 lh.style.height = rh .clientHeight + "px";
-//                 　　　　}else{
-//                 　　　　　　 rh.style.height = lh.clientHeight + "px";
-//                   }
-//
-//                   var search_h = document.getElementById('search');
-//                   var result_h = document.getElementById('result');
-//                     if(search_h.clientHeight < result_h.clientHeight){
-//                   　　　　　　 search_h.style.height = result_h .clientHeight + "px";
-//                   　　　　
-//                     }
-//
-//
-//             }
+
+var c = document.getElementById('search_button');
+c.addEventListener('click',function(){
+  for(var i =0; i<10; i++){
+    var div = document.getElementById('output');
+
+    var out = div.getElementsByTagName('h4')[i];
+};
+    out.addEventListener('click',h4_Click);
+
+});
+
+  var h4_Click = function() {
+
+      document.getElementById('output').innerHTML = '';
+
+      var click_title = out.innerHTML;
+      console.log(click_title);
+
+      parameters = {
+
+        part:'snippet',
+        maxResults: 25,
+        q: click_title,
+        type: 'video',
+        key:YOUR_API_KEY
+
+      }
+
+      var xhttp = new XMLHttpRequest();
+      xhttp.addEventListener('load', parseRes);
+      var url = 'https://www.googleapis.com/youtube/v3/search?'+ encodeParameters(parameters);
+      console.log(url);
+      xhttp.open('GET', url);
+      xhttp.send();
+
+
+  }
