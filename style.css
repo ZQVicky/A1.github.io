@@ -99,7 +99,7 @@ h3 {
     text-align: center;
     padding-bottom: 1.5em;
 }
-#label {
+.label {
     font-family: 'Montserrat', 'Helvetica Nueue', Helvetica, Arial, sans-serif;
     font-style: italic;
     font-size: 2.5vh;
@@ -367,7 +367,7 @@ ul.page li a:hover:not(.active) {
   }
 
 
-  #label {
+  .label {
       font-size: 1.5vh;
   }
 
