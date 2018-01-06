@@ -67,9 +67,49 @@ var parseResponse = function() {
 
       }
     }
+    Page()
 
   }
 
+  var Page = function(){//setting the page number.
+      var page = document.createElement('ul');
+      page.className = 'page';
+      var li1 = document.createElement('li');
+      var a = document.createElement('a');
+      li1.className = 'page_num';
+      a.href = "#";
+      a.className = 'active';
+      a.append(document.createTextNode('1'));
+      li1.appendChild(a);
+
+      var li2 = document.createElement('li');
+      var a1 = document.createElement('a');
+      li2.className = 'page_num';
+      a1.href = "#";
+      a1.append(document.createTextNode('2'));
+      li2.appendChild(a1);
+
+      var li3 = document.createElement('li');
+      var a2 = document.createElement('a');
+      li3.className = 'page_num';
+      a2.href = "#";
+      a2.append(document.createTextNode('3'));
+      li3.appendChild(a2);
+
+      var li4 = document.createElement('li');
+      var a3= document.createElement('a');
+      li4.className = 'page_num';
+      a3.href = "#";
+      a3.append(document.createTextNode('4'));
+      li4.appendChild(a3);
+
+      page.appendChild(li1);
+      page.appendChild(li2);
+      page.appendChild(li3);
+      page.appendChild(li4);
+
+      output.append(page);
+  }
 // Function to ensure parameters used in request are encoded correctly
 var encodeParameters = function(params) {
     // join all key value pairs and store in an array
@@ -201,6 +241,7 @@ var parseRes = function() {
         output.append(divCreate);
       }
     }
+    Page();
   }
 
 var Search = function() {
