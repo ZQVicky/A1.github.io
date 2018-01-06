@@ -121,7 +121,7 @@ input[type=text]:focus {
     border-color:#231F20;
 }
 
-input[type=button] {
+input[type=submit] {
     background: url('images/search.png') rgba(230, 255, 204,0.30);
     background-size: cover;
     background-repeat: no-repeat;
@@ -135,6 +135,14 @@ input[type=button] {
     height: 1.7em;
     width: auto;
     align-items:flex-end;
+}
+
+input[type=button]{
+  cursor:pointer;
+  border-radius: 5px;
+  font-family: 'Montserrat', 'Helvetica Nueue', Helvetica, Arial, sans-serif;
+  margin-top: 0.5em;
+  font-size: 1em;
 }
 
 /*   main body's right section, the first part is the daily recommends part  */
