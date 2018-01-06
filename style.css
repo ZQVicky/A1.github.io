@@ -81,6 +81,7 @@ h3 {
 }
 
 #info {
+
   border-style:dashed;
   border-width: 5px;
   border-radius: 15px;
@@ -89,6 +90,7 @@ h3 {
   padding: 0.5em;
   font-size: 2.3vh;
   font-family:cursive;
+  text-align: justify;
 
 }
 
