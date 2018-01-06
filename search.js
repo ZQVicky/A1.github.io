@@ -181,7 +181,7 @@ var parseRes = function() {
     }else {
       for(var i = 0; i < 10; i++) {
         console.log(results[i]);
-        var titlePrint = document.createElement('h3');
+        var titlePrint = document.createElement('h4');
         titlePrint.append(document.createTextNode(results[i].snippet['title']));
         var desPrint = document.createElement('p');
         desPrint.append(document.createTextNode(results[i].snippet.description));
