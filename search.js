@@ -61,11 +61,13 @@ var parseResponse = function() {
         //add the fillings.
         description_div.appendChild(namePrint);
         description_div.appendChild(big_div);
+
         // output all the information in to the results area.
         output.append(description_div);
 
       }
     }
+
   }
 
 // Function to ensure parameters used in request are encoded correctly
@@ -114,8 +116,6 @@ var doSearch = function() {
 var search_button = document.getElementById('search_button');
 search_button.addEventListener('click',doSearch);
 
-var breakfast_api = document.getElementById('breakfast');
-breakfast_api.addEventListener('click', breakfastClick);
 
 // click picture showing BREAKFAST
 var breakfastClick = function() {
@@ -197,6 +197,7 @@ var parseRes = function() {
         divCreate.appendChild(vlog);
         divCreate.appendChild(desPrint);
 
+
         output.append(divCreate);
       }
     }
@@ -234,40 +235,106 @@ search_button.addEventListener('click',Search);
 
 
 
-var c = document.getElementById('search_button');
-c.addEventListener('click',function(){
-  for(var i =0; i<10; i++){
-    var div = document.getElementById('output');
+// var c = document.getElementById('search_button');
+// c.addEventListener('click',function(){
+//   for(var i =0; i<10; i++){
+//     var div = document.getElementById('output');
+//
+//     var out = div.getElementsByTagName('h4')[i];
+//   };
+//     out.addEventListener('click',h4_Click);
+//
+// });
+//
+//   var h4_Click = function() {
+//
+//       document.getElementById('output').innerHTML = '';
+//
+//       var click_title = out.innerHTML;
+//       console.log(click_title);
+//
+//       parameters = {
+//
+//         part:'snippet',
+//         maxResults: 25,
+//         q: click_title,
+//         type: 'video',
+//         key:YOUR_API_KEY
+//
+//       }
+//
+//       var xhttp = new XMLHttpRequest();
+//       xhttp.addEventListener('load', parseRes);
+//       var url = 'https://www.googleapis.com/youtube/v3/search?'+ encodeParameters(parameters);
+//       console.log(url);
+//       xhttp.open('GET', url);
+//       xhttp.send();
+//
+//
+//   }
 
-    var out = div.getElementsByTagName('h4')[i];
-};
-    out.addEventListener('click',h4_Click);
-
-});
-
-  var h4_Click = function() {
-
-      document.getElementById('output').innerHTML = '';
-
-      var click_title = out.innerHTML;
-      console.log(click_title);
-
-      parameters = {
-
-        part:'snippet',
-        maxResults: 25,
-        q: click_title,
-        type: 'video',
-        key:YOUR_API_KEY
-
-      }
-
-      var xhttp = new XMLHttpRequest();
-      xhttp.addEventListener('load', parseRes);
-      var url = 'https://www.googleapis.com/youtube/v3/search?'+ encodeParameters(parameters);
-      console.log(url);
-      xhttp.open('GET', url);
-      xhttp.send();
-
-
-  }
+// function Paging(list_num,ali,btn){
+//     this.list_num=list_num;
+//     this.ali=ali;
+//     this.btn=btn;
+//     this.page=1;//定义一个当前页面的全局变量
+//     this.num=5;//每页文章数目
+//     this.page_num=Math.ceil(this.list_num/this.num);//根据文章数和每页显示数，向上取整算出页码数
+//     this.drc=[this.page-2,this.page-1,this.page,this.page+1,this.page+2];
+// }
+// Paging.prototype={
+//     init:function(){
+//         var self=this;
+//         //ali事件
+//         for(var i=0,len=ali.length;i<len;i++){
+//             //给ali添加innertext
+//             if(this.drc[i]>0&&this.drc[i]<=this.page_num){
+//                 ali[i].innerText=this.drc[i];
+//             }else{
+//                 ali[i].innerText='*';
+//             }
+//             ali[i].onclick=function(){
+//                 var val=this.innerText;
+//                 if(val%1===0){
+//                     self.page=parseInt(val);
+//                 }else{
+//                     alert('请单击正确的页码');
+//                     return;
+//                 }
+//                 self.render();
+//             }
+//         }
+//         btn[0].onclick =function(){
+//             self.page--;
+//             self.render();
+//         }
+//         btn[1].onclick=function(){
+//             self.page++;
+//             self.render();
+//         }
+//     },
+//     render:function(){
+//         if(this.page<=0){
+//             alert('已经是列表的首页');
+//         }else if(this.page>this.page_num){
+//             alert('已经是列表的最后一页');
+//         }else{
+//             this.drc=[this.page-2,this.page-1,this.page,this.page+1,this.page+2];
+//             for(var i=0,len=ali.length;i<len;i++){
+//                 if(this.drc[i]<=0||this.drc[i]>this.page_num){
+//                     ali[i].innerText='*';
+//                 }else{
+//                     ali[i].innerText=this.drc[i];
+//                 }
+//             }
+//         }
+//     }
+// }
+// //文章数目，定义50篇
+// var list_num=50;
+// //ali，获取页码的DOM
+// var ali=document.getElementsByClassName('page_num');
+// //btn，获取上下2页的按钮
+// var btn=document.getElementsByClassName('list_btn');
+// var paging=new Paging(list_num,ali,btn);
+// paging.init();

@@ -228,6 +228,29 @@ input[type=button] {
   margin: 0;
 }
 
+ul.page {
+  display: inline-block;
+  padding: 0;
+  margin: 0;
+}
+
+ul.page li {display: inline;}
+
+ul.page li a {
+    color: black;
+    float: left;
+    padding: 8px 16px;
+    text-decoration: none;
+}
+
+ul.page li a.active {
+    background-color: rgba(215, 246, 182, 1);
+    color: black;
+}
+
+ul.page li a:hover:not(.active) {
+  background-color: #ddd;
+}
 
 /* the output for recipes results*/
 
@@ -362,7 +385,7 @@ input[type=button] {
 
 
   /*  videos css style  */
-  .videos > h3{
+  .videos > h4{
     font-size: 2.5vh;
   }
 
@@ -378,116 +401,7 @@ input[type=button] {
 
 }
 
-@media screen and (min-width: 572px) and (max-width: 768px){
-  .header {
-    height: 25vh;
-    width: 100vw;
-  }
-
-  h2 {
-    font-size: 5vh;
-    padding: 70px 0 0 0;
-
-  }
-
-  h3 {
-    font-size: 3vh;
-  }
-
-  .main {
-    display:flex;
-    flex-direction:column;
-    margin-top: 1em;
-  }
-
-  .up_container {
-    display: flex;
-    flex-direction:column;
-  }
-
-  .down_container{
-    display: flex;
-    flex-direction: column;
-  }
-
-  .container1 {
-    background-color: rgba(230, 255, 204,0.59) ;
-    margin-left: 0;
-    margin-bottom: 1em;
-    height: auto;
-    width: 100vw;
-  }
-
-  #select {
-    height: 4vh;
-    width: 20vw;
-  }
-  input[type=text] {
-      height: 3vh;
-      width: 30vw;
-  }
-
-
-  .container2 {
-    height: auto;
-    width: 100vw;
-  }
-
-  .img{
-    height: 18vh;
-    width: 30vw;
-  }
-
-  #output {
-    margin: 0em;
-  }
-
-  #carrot {
-    height: 15vh;
-    width: auto;
-  }
-
-  .description, .videos {
-    width: 90vw;
-  }
-  .description > h4{
-    font-size: 3vh;
-  }
-
-  .big_div {
-    width: 90vw;
-  }
-
-  .info_div > p {
-    font-size: 2vh;
-    line-height: 2.5vh;
-  }
-
-
-  .img_api {
-    height: auto;
-    width: 12vw;
-    border-radius: 30%;
-  }
-
-  /*  videos css style  */
-  .videos > h3{
-    font-size: 3vh;
-  }
-
-  .videos > p {
-    font-size: 2vh;
-  }
-
-  .vlogs {
-    width: 80vw;
-    height: 23vh;
-    border-style: none;
-  }
-
-}
-
-@media screen and (max-width: 571px){
+@media screen and (max-width: 768px){
 
   .header {
     height: 20vh;
@@ -562,6 +476,7 @@ input[type=button] {
   }
 
 
+
   .description, .videos {
     width: 88vw;
   }
@@ -590,7 +505,7 @@ input[type=button] {
   }
 
   /*  videos css style  */
-  .videos > h3{
+  .videos > h4{
     font-size: 3vh;
   }
 
