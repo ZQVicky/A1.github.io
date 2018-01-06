@@ -9,7 +9,7 @@ var parseResponse = function() {
     var results = response.matches;
     if (results == 0){
       var nullPrint = document.createElement('h1');
-      nullPrint.append("Sorry, we can't find the recipes.\n\n Please search again.");
+      nullPrint.append("Sorry, we can't find the related recipes.\n\n Please try again.");
       output.append(nullPrint);
     }else {
       for(var i = 0; i < 10; i++) {
@@ -216,7 +216,7 @@ var parseRes = function() {
     var results = response.items;
     if (results == 0){
       var nullPrint = document.createElement('h1');
-      nullPrint.append("Sorry, we can't find the recipes.\n\n Please search again.");
+      nullPrint.append("Sorry, we can't find the related videos.\n\n Please try again.");
       output.append(nullPrint);
     }else {
       for(var i = 0; i < 10; i++) {
