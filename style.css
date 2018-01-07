@@ -4,7 +4,7 @@ body {
 }
 /*  setting header   */
 .header {
-  height: 28vh;
+  height: 25vh;
   width: 100vw;
   background-image: url('images/6.jpg');
   background-repeat: no-repeat;
@@ -21,7 +21,7 @@ h2 {
   font-family: 'Montserrat', 'Helvetica Nueue', Helvetica, Arial, sans-serif;
   font-size: 8vh;
   color: #231F20;
-  padding: 70px 0 0 0;
+  padding: 65px 0 0 0;
   text-align: center;
   margin: 0;
 }
